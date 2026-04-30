@@ -1,0 +1,31 @@
+{
+  "name": "atrakt.github.io",
+  "private": true,
+  "version": "1.2.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/fetch-github-data.js && node scripts/fetch-github-colors.js",
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "prebuild": "node scripts/fetch-github-data.js && node scripts/fetch-github-colors.js",
+    "build": "vite build && tsx scripts/prerender.js",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "preact": "^10.29.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.5",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/node": "^22.14.0",
+    "preact-render-to-string": "^6.6.7",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
